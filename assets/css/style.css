@@ -522,7 +522,8 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; word-break: aut
   .nav a.nav-link { font-size: 26px; }
   .nav-open .nav { opacity: 1; pointer-events: auto; }
   .nav-toggle { display: block; z-index: 60; }
-  .nav-open .site-header { color: var(--white); background: transparent; box-shadow: none; }
+  /* ぼかし効果があると固定メニューがヘッダー内に閉じ込められるため、メニュー表示中は外す */
+  .nav-open .site-header { color: var(--white); background: transparent; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
   .hero-roles, .hero-scroll { display: none; }
   .hero-eyebrow { font-size: 11px; }
   .concept, .about-program, .story, .journal, .persona, .conditions, .cta, .a-lead .container { grid-template-columns: 1fr; }
