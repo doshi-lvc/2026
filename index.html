@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=25">
+<link rel="stylesheet" href="assets/css/style.css?v=33">
 </head>
 <body>
 
@@ -26,7 +26,6 @@
   <nav class="nav" aria-label="メインメニュー">
     <a class="nav-link" href="#village">VILLAGE<small>道志村</small></a>
     <a class="nav-link" href="#team">TEAM<small>隊員紹介</small></a>
-    <a class="nav-link" href="#stories">STORIES<small>活動記事</small></a>
     <a class="nav-link" href="#talk">TALK<small>座談会</small></a>
     <a class="nav-link" href="#recruit">RECRUIT<small>募集</small></a>
     <a class="btn btn-orange btn-sm" href="https://smout.jp/plans/29653" target="_blank" rel="noopener">募集中！応募はこちら</a>
@@ -76,7 +75,7 @@
           <span class="tag">DOSHI RIVER</span>
         </div>
         <div class="concept-text reveal reveal-d1">
-          <p class="big">車や電車でサクッと東京へ。<br>なのに村に入れば、<span class="hl">標高約700m</span>の<br>圧倒的な大自然と涼しさ。</p>
+          <p class="big">車や電車でサクッと東京へ。<br>なのに村に入れば、<span class="hl">標高約700m</span>の<br class="pc">圧倒的な大自然と涼しさ。</p>
           <p>山梨県の南東端、神奈川県との県境に位置する道志村。村を流れる道志川は、120年以上にわたって横浜市民の水源となってきました。村の面積の約95%は森林。国道413号「道志みち」沿いには大小のキャンプ場が並び、週末にはバイカーやキャンパーが全国から集まります。</p>
           <p>人口は約1,500人。人口減少という課題を抱えながらも、毎日多くの人が通り、集まる。外からやってきた隊員たちは口を揃えて言います。「このギャップは、ほかの移住地と比べても圧倒的なアドバンテージ。可能性しか感じない」と。</p>
         </div>
@@ -97,12 +96,12 @@
     <div class="container">
       <div class="sec-head reveal" style="padding-top:clamp(80px,10vw,130px)">
         <span class="sec-label">CHARM</span>
-        <h2 class="sec-title">隊員が見つけた、<em>道志村のポテンシャル</em></h2>
+        <h2 class="sec-title">隊員が見つけた、<br class="sp"><em>道志村のポテンシャル</em></h2>
         <p class="sec-desc">村の人にとっては「いつもの風景」。でも、外から来た僕たちには宝の山に見えました。</p>
       </div>
       <div class="charms">
         <article class="charm is-water reveal">
-          <img loading="lazy" src="assets/img/nat-river.jpg" alt="森の中を流れる透明な沢">
+          <img loading="lazy" src="assets/img/nat-stream.jpg" alt="苔むした岩の間を流れる透き通った渓流" style="object-position:50% 65%">
           <div class="charm-body"><span class="charm-no">01 / WATER</span><h3>異常なほど綺麗な川</h3><p>太陽の光が逆光でキラキラ当たる最高の沢。子どもも楽しめる「陽の当たる沢登りコース」だって作れる。</p></div>
         </article>
         <article class="charm reveal reveal-d1">
@@ -135,101 +134,12 @@
   </section>
 
   <!-- TEAM -->
-  <section class="section team-section" id="team">
+  <section class="section" id="team">
     <div class="container">
       <div class="sec-head reveal">
         <span class="sec-label">TEAM 2026</span>
         <h2 class="sec-title">同期4人が語る<br>「これからの<em>暮らし</em>と<em>挑戦</em>」</h2>
-        <p class="sec-desc">2026年春、それぞれの志を胸に道志村へやってきた4人。ジビエ、林業、フルーツ、観光・広報。一見バラバラに見える4つの道が、道志の未来へとつながっていきます。</p>
-      </div>
-
-      <div class="team-grid">
-        <a class="member reveal" href="stories/kobayashi.html">
-          <div class="member-photo"><img loading="lazy" src="assets/img/p-kobayashi.jpg" alt="小林鈴平。迷彩のベストを着て猟銃を持ち笑顔を見せる"></div>
-          <span class="member-field">ジビエ</span>
-          <div class="member-info">
-            <div class="member-role">WILD PRODUCER</div>
-            <h3 class="member-name">小林 鈴平<small>RINPEI KOBAYASHI</small></h3>
-            <p class="member-catch">命をいただく。獣害を減らしつつ、村の資源に。</p>
-            <span class="member-more">READ STORY</span>
-          </div>
-        </a>
-        <a class="member reveal reveal-d1" href="stories/kawasaki.html">
-          <div class="member-photo"><img loading="lazy" src="assets/img/p-kawasaki.jpg" alt="川崎大祐。赤い作業着でチェーンソーを構える"></div>
-          <span class="member-field">林業</span>
-          <div class="member-info">
-            <div class="member-role">FOREST CREATOR</div>
-            <h3 class="member-name">川崎 大祐<small>DAISUKE KAWASAKI</small></h3>
-            <p class="member-catch">山仕事が教える、世代を超えた責任。</p>
-            <span class="member-more">READ STORY</span>
-          </div>
-        </a>
-        <a class="member reveal reveal-d2" href="stories/arai.html">
-          <div class="member-photo"><img loading="lazy" src="assets/img/p-arai.jpg" alt="新井紳地。シカの頭骨を手に笑う"></div>
-          <span class="member-field">フルーツ</span>
-          <div class="member-info">
-            <div class="member-role">AGRI INNOVATOR</div>
-            <h3 class="member-name">新井 紳地<small>SHINJI ARAI</small></h3>
-            <p class="member-catch">『育てる』を、村の新しい力に。</p>
-            <span class="member-more">READ STORY</span>
-          </div>
-        </a>
-        <a class="member reveal reveal-d3" href="stories/murakami.html">
-          <div class="member-photo"><img loading="lazy" src="assets/img/p-murakami.jpg" alt="村上憲司。ジャケット姿で笑顔を見せる"></div>
-          <span class="member-field">観光・広報</span>
-          <div class="member-info">
-            <div class="member-role">DESTINATION DESIGNER</div>
-            <h3 class="member-name">村上 憲司<small>KENJI MURAKAMI</small></h3>
-            <p class="member-catch">流行りで終わらせない「本物の地域おこし」を。</p>
-            <span class="member-more">READ STORY</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="profiles">
-        <div class="profile-card reveal">
-          <img loading="lazy" src="assets/img/p-arai.jpg" alt="">
-          <div>
-            <h4>新井 紳地<span>あらい しんじ</span></h4>
-            <dl><dt>出身／年齢</dt><dd>兵庫県／32歳</dd><dt>一番驚いたこと</dt><dd>お昼や夕方にチャイムが流れる</dd><dt>お気に入り</dt><dd>果樹畑候補地の“あそこ”♡</dd></dl>
-          </div>
-          <p class="bubble">世間話をたくさんしたいです！</p>
-        </div>
-        <div class="profile-card reveal reveal-d1">
-          <img loading="lazy" src="assets/img/p-kobayashi.jpg" alt="">
-          <div>
-            <h4>小林 鈴平<span>こばやし りんぺい</span></h4>
-            <dl><dt>出身／年齢</dt><dd>京都府／29歳</dd><dt>一番驚いたこと</dt><dd>走行中のクルマでも誰の車か見分けられる、村民の方の動体視力</dd><dt>お気に入り</dt><dd>自宅から眺める道坂川</dd></dl>
-          </div>
-          <p class="bubble">山梨一のジビエが有名な村にします！</p>
-        </div>
-        <div class="profile-card reveal">
-          <img loading="lazy" src="assets/img/p-kawasaki.jpg" alt="">
-          <div>
-            <h4>川崎 大祐<span>かわさき だいすけ</span></h4>
-            <dl><dt>出身／年齢</dt><dd>神奈川県／40歳</dd><dt>一番驚いたこと</dt><dd>人の温かさ、鹿の近さ、ブヨの後遺症</dd><dt>お気に入り</dt><dd>大室八幡神社</dd></dl>
-          </div>
-          <p class="bubble">道志村の美しい山々を次世代に繋ぐお手伝いをさせていただきます！</p>
-        </div>
-        <div class="profile-card reveal reveal-d1">
-          <img loading="lazy" src="assets/img/p-murakami.jpg" alt="">
-          <div>
-            <h4>村上 憲司<span>むらかみ けんじ</span></h4>
-            <dl><dt>出身／年齢</dt><dd>兵庫県／59歳</dd><dt>一番驚いたこと</dt><dd>音。新しい音を聞く度に反応しています</dd><dt>お気に入り</dt><dd>雄滝・雌滝。物語があるのも気に入っています</dd></dl>
-          </div>
-          <p class="bubble">道志村はすごい村です！</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STORIES -->
-  <section class="section" id="stories">
-    <div class="container">
-      <div class="sec-head reveal">
-        <span class="sec-label">STORIES</span>
-        <h2 class="sec-title">現場から届く、<em>4つの挑戦</em>。</h2>
-        <p class="sec-desc">山に入り、畑に立ち、命と向き合い、村の外へ飛び出す。隊員それぞれが、自分の言葉で綴る活動の記録です。</p>
+        <p class="sec-desc">2026年春、それぞれの志を胸に道志村へやってきた4人。ジビエ、林業、フルーツ、観光。一見バラバラに見える4つの道が、道志の未来へとつながっていきます。</p>
       </div>
 
       <div class="stories">
@@ -285,7 +195,7 @@
           </div>
           <div class="story-text reveal reveal-d1">
             <span class="story-no">04</span>
-            <span class="story-kicker">TOURISM ／ 観光・広報</span>
+            <span class="story-kicker">TOURISM ／ 観光</span>
             <h3 class="story-title">流行りで終わらせない。<br>10年後の土壌となる地域おこしを。</h3>
             <p>村の人には「何もない、いつもの風景」。でも外の視点なら気づける宝が無数に眠っている。花火大会のポスター制作から、東京ビッグサイトでの企業40社との対話まで。見栄えの良い瞬間風速より、続く仕組みを。</p>
             <div class="story-by"><img loading="lazy" src="assets/img/p-murakami.jpg" alt=""><div>村上 憲司<small>DESTINATION DESIGNER</small></div></div>
@@ -379,6 +289,29 @@
       <img src="assets/img/mk-shoot.jpg" alt=""><img class="tall" src="assets/img/ar-orchard.jpg" alt=""><img src="assets/img/kw-kids.jpg" alt=""><img src="assets/img/life-dog.jpg" alt=""><img src="assets/img/mk-bee.jpg" alt=""><img class="tall" src="assets/img/kb-charm.jpg" alt=""><img src="assets/img/kw-elder.jpg" alt=""><img src="assets/img/mk-party.jpg" alt=""><img src="assets/img/nat-mountain.jpg" alt=""><img src="assets/img/ar-tape.jpg" alt=""><img src="assets/img/life-meal.jpg" alt=""><img src="assets/img/talk-2.jpg" alt="">
     </div>
   </div>
+
+  <!-- MAGAZINE -->
+  <section class="section" id="magazine">
+    <div class="container">
+      <div class="techo">
+        <a class="techo-cover reveal" href="assets/docs/doshi-techo-27.pdf" download="道志手帖27号.pdf" aria-label="道志手帖27号のPDFをダウンロード">
+          <img loading="lazy" src="assets/img/techo-27.jpg" alt="道志手帖27号の表紙。杉の大木の間に幟が立つ神社の参道の写真">
+        </a>
+        <div class="techo-text reveal reveal-d1">
+          <div class="sec-head">
+            <span class="sec-label">MAGAZINE</span>
+            <h2 class="sec-title">村を知るなら、<br class="sp"><em>道志手帖</em>。</h2>
+          </div>
+          <p>「道志手帖」は、10年前に道志村へ移住してきた先輩協力隊が始めた情報誌です。最新の27号は、先輩たちと私たち TEAM 2026 が合同で制作しました。</p>
+          <p>バックナンバーには、10年前の先輩たちの奮闘の記録と、「道志村のことを知るならこれを見て！」と言えるほど村内を徹底的に取材した記事が詰まっています。</p>
+          <div class="techo-actions">
+            <a class="btn btn-orange" href="assets/docs/doshi-techo-27.pdf" download="道志手帖27号.pdf">27号をダウンロード <small>PDF・約19MB</small></a>
+            <a class="link-arrow" href="https://doshi-okoshi.jimdofree.com/%E9%81%93%E5%BF%97%E6%89%8B%E5%B8%96%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89/" target="_blank" rel="noopener">バックナンバーはこちら</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- RECRUIT -->
   <section id="recruit">
@@ -528,7 +461,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="#top" class="logo"><img class="logo-img logo-white" src="assets/img/logo-white.svg" alt="DOSHI 道志村 地域おこし協力隊"><img class="logo-img logo-color" src="assets/img/logo.svg" alt="" aria-hidden="true"></a>
+        <a href="#top" class="logo"><img class="logo-emblem" loading="lazy" src="assets/img/emblem.svg" alt="道志村 地域おこし協力隊"></a>
         <address>山梨県道志村 ふるさと振興課<br>山梨県南都留郡道志村6181-1</address>
       </div>
       <div>
@@ -536,8 +469,8 @@
         <ul>
           <li><a href="#village">道志村について</a></li>
           <li><a href="#team">隊員紹介</a></li>
-          <li><a href="#stories">活動記事</a></li>
           <li><a href="#talk">座談会</a></li>
+          <li><a href="#magazine">道志手帖</a></li>
           <li><a href="#recruit">協力隊募集</a></li>
         </ul>
       </div>
