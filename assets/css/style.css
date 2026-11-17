@@ -187,15 +187,25 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; word-break: aut
 .reveal-d1 { transition-delay: .1s; } .reveal-d2 { transition-delay: .2s; } .reveal-d3 { transition-delay: .3s; }
 
 /* ---------- Intro / Concept ---------- */
-.concept { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 6vw, 90px); align-items: center; }
-.concept-photo { position: relative; }
-.concept-photo img { border-radius: var(--radius); aspect-ratio: 4/5; object-fit: cover; width: 100%; }
-.concept-photo .tag {
-  position: absolute; left: -14px; bottom: 30px; background: var(--blue); color: var(--white);
-  font-family: var(--ff-en); letter-spacing: .12em; padding: 10px 18px; font-size: 15px; border-radius: 4px;
-}
-.concept-text .big { font-family: var(--ff-mincho); font-weight: 800; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.7; margin-bottom: 28px; color: var(--green-800); }
-.concept-text .big .hl { background: linear-gradient(transparent 62%, var(--orange-soft) 62%); }
+/* village film: full-bleed nature loop with the lead copy on top */
+.film { position: relative; margin: 0; min-height: clamp(460px, 78vh, 820px); display: flex; align-items: flex-end; color: var(--white); overflow: hidden; background: var(--green-900) url("../img/nature-loop-poster.jpg") center/cover; }
+.film-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.film::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,30,20,.82) 0%, rgba(10,30,20,.35) 38%, rgba(10,30,20,0) 65%), linear-gradient(180deg, rgba(10,30,20,.35), rgba(10,30,20,0) 25%); }
+.film-inner { position: relative; z-index: 1; padding-bottom: clamp(36px, 7vh, 72px); display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px 40px; }
+.film-tag { grid-column: 1 / -1; justify-self: start; font-family: var(--ff-en); letter-spacing: .2em; font-size: 14px; background: var(--blue); padding: 6px 14px; border-radius: 4px; }
+.film-copy { margin: 0; font-family: var(--ff-mincho); font-weight: 800; font-size: clamp(24px, 3.2vw, 44px); line-height: 1.65; text-shadow: 0 2px 20px rgba(0,0,0,.45); }
+.film-copy .hl { color: var(--orange); }
+.film-play { display: inline-flex; align-items: center; gap: 14px; background: rgba(255,255,255,.12); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.35); color: var(--white); border-radius: 999px; padding: 10px 22px 10px 10px; cursor: pointer; font: inherit; text-align: left; transition: background .3s, transform .3s; }
+.film-play:hover { background: rgba(255,255,255,.22); transform: translateY(-2px); }
+.film-play-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--orange); position: relative; flex: none; }
+.film-play-icon::after { content: ""; position: absolute; left: 17px; top: 13px; border: 9px solid transparent; border-left: 14px solid var(--white); border-right: 0; }
+.film-play b { display: block; font-family: var(--ff-en); font-weight: 400; letter-spacing: .15em; font-size: 15px; }
+.film-play small { font-size: 12px; opacity: .9; }
+.concept-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(28px, 5vw, 64px); margin-top: clamp(40px, 6vw, 72px); color: var(--ink-soft); }
+.film-modal { border: 0; padding: 0; background: transparent; width: min(1100px, 94vw); max-width: none; overflow: visible; }
+.film-modal::backdrop { background: rgba(5,15,10,.88); }
+.film-modal video { width: 100%; display: block; border-radius: 10px; background: #000; }
+.film-close { position: absolute; right: 0; top: -48px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--white); color: var(--green-900); font-size: 24px; line-height: 1; cursor: pointer; }
 
 /* ---------- Numbers ---------- */
 .numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: clamp(56px, 8vw, 96px); background: var(--line); border-radius: var(--radius); overflow: hidden; }
@@ -521,7 +531,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; word-break: aut
   .nav-open .site-header { color: var(--white); background: transparent; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
   .hero-roles, .hero-scroll { display: none; }
   .hero-eyebrow { font-size: 11px; }
-  .concept, .about-program, .story, .journal, .persona, .conditions, .cta, .a-lead .container { grid-template-columns: 1fr; }
+  .about-program, .story, .journal, .persona, .conditions, .cta, .a-lead .container { grid-template-columns: 1fr; }
   .story:nth-child(even) .story-visual { order: 0; }
   .story-visual { margin-bottom: 30px; }
   .talk-cols, .events, .a-next-grid { grid-template-columns: 1fr; }
@@ -590,4 +600,14 @@ br.sp { display: none; }
 @media (max-width: 900px) {
   .techo { grid-template-columns: 1fr; }
   .techo-cover { max-width: 240px; }
+}
+
+@media (max-width: 900px) {
+  .film { min-height: 72svh; }
+  .film-inner { grid-template-columns: 1fr; }
+  .concept-body { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .film-copy { font-size: 5.6vw; }
+  .film-play { padding-right: 16px; }
 }

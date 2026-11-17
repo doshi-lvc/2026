@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=33">
+<link rel="stylesheet" href="assets/css/style.css?v=34">
 </head>
 <body>
 
@@ -69,16 +69,24 @@
         <h2 class="sec-title">ここは「チャンスしかない」<br><span class="blue">水源の村</span>だ。</h2>
       </div>
 
-      <div class="concept">
-        <div class="concept-photo reveal">
-          <img loading="lazy" src="assets/img/kw-river.jpg" alt="苔むした岩と澄んだ沢の流れ。沢の中に座る隊員">
-          <span class="tag">DOSHI RIVER</span>
-        </div>
-        <div class="concept-text reveal reveal-d1">
-          <p class="big">車や電車でサクッと東京へ。<br>なのに村に入れば、<span class="hl">標高約700m</span>の<br class="pc">圧倒的な大自然と涼しさ。</p>
-          <p>山梨県の南東端、神奈川県との県境に位置する道志村。村を流れる道志川は、120年以上にわたって横浜市民の水源となってきました。村の面積の約95%は森林。国道413号「道志みち」沿いには大小のキャンプ場が並び、週末にはバイカーやキャンパーが全国から集まります。</p>
-          <p>人口は約1,500人。人口減少という課題を抱えながらも、毎日多くの人が通り、集まる。外からやってきた隊員たちは口を揃えて言います。「このギャップは、ほかの移住地と比べても圧倒的なアドバンテージ。可能性しか感じない」と。</p>
-        </div>
+    </div>
+
+    <figure class="film">
+      <video class="film-bg" muted loop playsinline preload="none" poster="assets/img/nature-loop-poster.jpg" data-src="assets/video/doshi-nature-loop.mp4" data-src-hd="assets/video/doshi-nature-loop-720.mp4" data-src-hevc="assets/video/doshi-nature-loop-1080.mp4" aria-hidden="true"></video>
+      <div class="film-inner container">
+        <span class="film-tag">DOSHI NATURE</span>
+        <p class="film-copy reveal">車や電車でサクッと東京へ。<br>なのに村に入れば、<span class="hl">標高約700m</span>の<br class="pc">圧倒的な大自然と涼しさ。</p>
+        <button class="film-play" type="button" aria-haspopup="dialog">
+          <span class="film-play-icon" aria-hidden="true"></span>
+          <span><b>FULL FILM</b><small>道志村の映像を音声付きで見る（1:32）</small></span>
+        </button>
+      </div>
+    </figure>
+
+    <div class="container">
+      <div class="concept-body reveal">
+        <p>山梨県の南東端、神奈川県との県境に位置する道志村。村を流れる道志川は、120年以上にわたって横浜市民の水源となってきました。村の面積の約95%は森林。国道413号「道志みち」沿いには大小のキャンプ場が並び、週末にはバイカーやキャンパーが全国から集まります。</p>
+        <p>人口は約1,500人。人口減少という課題を抱えながらも、毎日多くの人が通り、集まる。外からやってきた隊員たちは口を揃えて言います。「このギャップは、ほかの移住地と比べても圧倒的なアドバンテージ。可能性しか感じない」と。</p>
       </div>
 
       <div class="numbers reveal">
@@ -488,8 +496,13 @@
   </div>
 </footer>
 
+<dialog class="film-modal" aria-label="道志村の映像">
+  <button class="film-close" type="button" aria-label="閉じる">×</button>
+  <video controls playsinline preload="none" poster="assets/img/doshi-film-poster.jpg" src="assets/video/doshi-film.mp4"></video>
+</dialog>
+
 <a class="btn btn-orange float-cta" href="https://smout.jp/plans/29653" target="_blank" rel="noopener">応募・相談はSMOUTで <span class="arrow">→</span></a>
 
-<script src="assets/js/main.js?v=2"></script>
+<script src="assets/js/main.js?v=4"></script>
 </body>
 </html>

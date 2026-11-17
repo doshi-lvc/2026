@@ -65,4 +65,48 @@
     }, { threshold: 0.6 });
     counters.forEach(function (el) { co.observe(el); });
   }
+
+  // village film: load the nature loop only when it comes near the screen (saves mobile data)
+  var film = document.querySelector('.film-bg');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // PC: high-quality 1080p (HEVC) or 720p (H.264); phones / data saver: the light version
+  function pickFilmSrc(v) {
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (window.innerWidth >= 900 && !saveData) {
+      if (v.canPlayType('video/mp4; codecs="hvc1"')) return v.getAttribute('data-src-hevc');
+      return v.getAttribute('data-src-hd');
+    }
+    return v.getAttribute('data-src');
+  }
+  if (film && !reduceMotion && 'IntersectionObserver' in window) {
+    var fo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          if (!film.src) film.src = pickFilmSrc(film);
+          var p = film.play();
+          if (p && p.catch) p.catch(function () {});
+        } else if (film.src) {
+          film.pause();
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+    fo.observe(film);
+  }
+
+  // full film in a dialog, with sound
+  var modal = document.querySelector('.film-modal');
+  var openBtn = document.querySelector('.film-play');
+  if (modal && openBtn && modal.showModal) {
+    var full = modal.querySelector('video');
+    openBtn.addEventListener('click', function () {
+      modal.showModal();
+      var p = full.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+    modal.querySelector('.film-close').addEventListener('click', function () { modal.close(); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
+    modal.addEventListener('close', function () { full.pause(); });
+  } else if (openBtn) {
+    openBtn.addEventListener('click', function () { window.location.href = 'assets/video/doshi-film.mp4'; });
+  }
 })();
